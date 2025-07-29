@@ -89,31 +89,22 @@ ul li a:hover {
   bottom: 0;
 }
 
-/* ✅ Responsive Design for phones and tablets ONLY */
+/* ✅ Responsive Design for phones and tablets */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
-    padding: 10px 5%;
-  }
-
-  .navbar .logo {
-    width: 120px;
-    margin: 0 0 10px 0;
   }
 
   ul {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
     width: 100%;
+    text-align: left;
     padding-left: 0;
-    margin-top: 10px;
   }
 
   ul li {
     display: block;
-    padding: 0;
+    padding: 10px 0;
   }
 
   .info {
@@ -123,10 +114,6 @@ ul li a:hover {
 
   .info h1 {
     font-size: 9vw;
-  }
-
-  .info h3 {
-    font-size: 4.5vw;
   }
 
   .image {
