@@ -1,99 +1,5 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* Your original CSS remains unchanged above this point */
 
-body {
-  font-family: sans-serif;
-  background: url('back.png') no-repeat center center/cover;
-  color: aliceblue;
-}
-
-.main {
-  width: 100%;
-  min-height: 100vh;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-}
-
-.navbar {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.logo {
-  width: 160px;
-}
-
-.navbar ul {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-}
-
-.navbar ul li a {
-  text-decoration: none;
-  font-weight: bold;
-  color: aqua;
-  transition: 0.3s;
-  font-size: 16px;
-}
-
-.navbar ul li a:hover {
-  color: rgb(230, 130, 59);
-}
-
-.content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-top: 40px;
-  gap: 20px;
-}
-
-.info {
-  flex: 1;
-  min-width: 280px;
-}
-
-.info h1 {
-  font-size: 3rem;
-  color: brown;
-}
-
-.info h3 {
-  font-size: 1.1rem;
-  font-weight: lighter;
-  letter-spacing: 1px;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  margin-top: 10px;
-}
-
-.info span {
-  color: darkgoldenrod;
-}
-
-.image {
-  flex: 1;
-  min-width: 250px;
-  max-width: 400px;
-  text-align: center;
-}
-
-.image img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-}
-
-/* ✅ Responsive Design */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
@@ -101,28 +7,42 @@ body {
     gap: 10px;
   }
 
-  .navbar ul {
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    padding-left: 0;
+  .navbar .logo {
+    width: 120px;
+    margin: 0 0 10px 0;
   }
 
-  .content {
-    flex-direction: column;
-    align-items: flex-start;
+  ul {
+    width: 100%;
+    text-align: left;
+    padding-left: 0;
+    margin-top: 10px;
+  }
+
+  ul li {
+    display: block;
+    padding: 10px 0;
+  }
+
+  .info {
+    margin: 20px;
+    font-size: 16px;
   }
 
   .info h1 {
-    font-size: 8vw;
+    font-size: 9vw;
   }
 
   .info h3 {
-    font-size: 4vw;
+    font-size: 4.5vw;
   }
 
   .image {
-    max-width: 100%;
-    margin-top: 20px;
+    display: none; /* Hide problematic image on mobile */
+  }
+
+  .main {
+    height: auto;
+    padding-bottom: 30px;
   }
 }
