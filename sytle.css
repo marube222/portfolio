@@ -4,68 +4,76 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: sans-serif;
+  background: url('back.png') no-repeat center center/cover;
+  color: aliceblue;
+}
+
 .main {
   width: 100%;
-  height: 100vh;
-  background: url(back.png) no-repeat center center/cover;
-  position: relative;
-  font-family: sans-serif;
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .navbar {
-  width: 86%;
-  margin: auto;
+  width: 100%;
   display: flex;
-  padding: 15px 0;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
 }
 
-.navbar .logo {
+.logo {
   width: 160px;
-  cursor: pointer;
-  margin-top: 1%;
-  margin-left: -6%;
 }
 
-ul {
-  margin: 0;
-}
-
-ul li {
+.navbar ul {
   list-style: none;
-  display: inline-block;
-  padding: 10px 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
-ul li a {
-  font-size: 16px;
-  font-weight: bold;
+.navbar ul li a {
   text-decoration: none;
+  font-weight: bold;
   color: aqua;
-  transition: 0.4s ease;
+  transition: 0.3s;
+  font-size: 16px;
 }
 
-ul li a:hover {
+.navbar ul li a:hover {
   color: rgb(230, 130, 59);
 }
 
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  gap: 20px;
+}
+
 .info {
-  color: aliceblue;
-  margin-left: 7%;
-  margin-top: 6%;
+  flex: 1;
+  min-width: 280px;
 }
 
 .info h1 {
+  font-size: 3rem;
   color: brown;
-  font-size: 50px;
 }
 
 .info h3 {
-  letter-spacing: 1px;
-  font-size: 18px;
+  font-size: 1.1rem;
   font-weight: lighter;
+  letter-spacing: 1px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin-top: 10px;
 }
 
 .info span {
@@ -73,55 +81,48 @@ ul li a:hover {
 }
 
 .image {
-  width: 40%;
-  height: 50%;
-  position: absolute;
-  right: 80px;
-  bottom: 10px;
+  flex: 1;
+  min-width: 250px;
+  max-width: 400px;
+  text-align: center;
 }
 
 .image img {
-  position: absolute;
-  height: 150%;
-  left: 50%;
-  top: -70%;
-  transform: translateX(-55%);
-  bottom: 0;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
-/* ✅ Responsive Design for phones and tablets */
+/* ✅ Responsive Design */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
+    gap: 10px;
   }
 
-  ul {
+  .navbar ul {
+    flex-direction: column;
+    align-items: flex-start;
     width: 100%;
-    text-align: left;
     padding-left: 0;
   }
 
-  ul li {
-    display: block;
-    padding: 10px 0;
-  }
-
-  .info {
-    margin: 20px;
-    font-size: 16px;
+  .content {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .info h1 {
-    font-size: 9vw;
+    font-size: 8vw;
+  }
+
+  .info h3 {
+    font-size: 4vw;
   }
 
   .image {
-    display: none;
-  }
-
-  .main {
-    height: auto;
-    padding-bottom: 30px;
+    max-width: 100%;
+    margin-top: 20px;
   }
 }
