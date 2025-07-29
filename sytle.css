@@ -89,39 +89,3 @@ ul li a:hover {
   bottom: 0;
 }
 
-/* ✅ Responsive Design for phones and tablets */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  ul {
-    width: 100%;
-    text-align: left;
-    padding-left: 0;
-  }
-
-  ul li {
-    display: block;
-    padding: 10px 0;
-  }
-
-  .info {
-    margin: 20px;
-    font-size: 16px;
-  }
-
-  .info h1 {
-    font-size: 9vw;
-  }
-
-  .image {
-    display: none;
-  }
-
-  .main {
-    height: auto;
-    padding-bottom: 30px;
-  }
-}
